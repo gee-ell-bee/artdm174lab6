@@ -1,0 +1,22 @@
+[
+    {
+        "code": "ST",
+        "name": "Stark",
+        "members": ["Eddard", "Catelyn", "Robb", "Sansa", "Arya", "Jon Snow"]
+    },
+    {
+        "code": "LA",
+        "name": "Lannister",
+        "members": ["Tywin", "Cersei", "Jaime", "Tyrion"]
+    }, 
+    {
+        "code": "BA",
+        "name": "Baratheon",
+        "members": ["Robert", "Stannis", "Renly"]
+    },
+    {
+        "code": "TA",
+        "name": "Targaryen",
+        "members": ["Aerys", "Daenerys", "Viserys"]
+    } 
+]
