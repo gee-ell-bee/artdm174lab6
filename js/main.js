@@ -34,24 +34,16 @@ fetch("houses.json")
     .catch(err => console.log("GoT error!", err));
     //this only runs if there is an error during the above process
 
-fetch("colors.json")
+fetch("https://x-colors.herokuapp.com/api/random?number=2")
     .then((response) => response.json())
     .then(data => {
-        let html = "";
-        data.forEach(color => {
-            let codes = color.join(", ");
-            let objInfo =
-            `<dl>
-                <dt class="house">${codes}</dt>
-                <dd class="people">${family}</dd>
-            </dl>`;
-            html += objInfo;
-        });
-        const container = document.querySelector("#container");
-        container.innerHTML = html;
-        /*color => {
-        let bgColor = color[0].rgb.value;
-        const bg = document.querySelector("#main");
-        console.log(bg, bgColor);*/
+        const containerCss = document.getElementById("container").style;
+        const docCss = document.getElementById("main").style;
+        
+        let color1 = data[0].rgb;
+        let color2 = data[1].rgb;
+        docCss.backgroundColor = color1;
+        containerCss.backgroundColor = color2;
+        containerCss.filter = "brightness(125%)";
     })
     .catch(err => console.log("Color error!", err));
